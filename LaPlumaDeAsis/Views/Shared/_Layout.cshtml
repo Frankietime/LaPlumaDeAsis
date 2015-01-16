@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>La Pluma de Asís - @ViewBag.Title</title>
+    @Styles.Render("/Content/css")
+    @Scripts.Render("/bundles/modernizr")
+    @Styles.Render("~/Content/themes/base/css")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryui")
+
+    @RenderSection("scripts", required: false)
+    <script>
+        $(function () {
+            $("#menu").menu();
+        });
+    </script>
+    <style>
+        .ui-menu {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header_container">
+        <div class="header_content">
+            <div class="header_img">
+                <a href="~/Home/Index">
+                    <img width="1053" height="203" src="~/Content/imgs/pluma-logo.png">
+                </a>
+            </div>
+            <div class="nav_container horizontal">
+                <div class="page_link">
+                    @Html.ActionLink("LA PLUMA","LaPluma","Home")
+                </div>
+                <div class="page_link">
+                    @Html.ActionLink("EL AUTOR","ElAutor","Home")
+                </div>
+                <div class="page_link">
+                    <ul id="menu">
+                        <li>
+                            Busqueda
+                                <ul>
+                                    <li>
+                                        CATALOGO COMPLETO
+                                    </li>
+                                    <li>
+                                        POR MATERIALES <!--- En este caso puede optarse por un menu desplegable para seleccionar materiales una pagina de materiales donde se aprovechen las texturas para generar impacto --->
+                                        <ul>
+                                            <li>
+                                                Marfil
+                                            </li>
+                                            <li>
+                                                Madera
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - La Pluma de Asís</p>
+    </footer>
+    
+</body>
+</html>
