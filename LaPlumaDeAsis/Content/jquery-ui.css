@@ -460,10 +460,9 @@ button.ui-button::-moz-focus-inner {
 }
 
 #menu {
-    display:inline;
     list-style-type: none;
-    color: red;
 }
+
 .ui-menu .ui-menu {
 	position: absolute;
 }
