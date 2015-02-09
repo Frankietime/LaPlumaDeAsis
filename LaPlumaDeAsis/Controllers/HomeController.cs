@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaPlumaDeAsis.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +9,20 @@ namespace LaPlumaDeAsis.Controllers
 {
     public class HomeController : Controller
     {
+        LaPlumaDeAsisDb _db = new LaPlumaDeAsisDb();
+
         public ActionResult Index()
         {
+
             return View();
         }
 
+        [Authorize]
+        public ActionResult AdminCatalogo()
+        {
+            var model = _db.Cuchillos.ToList();
+            return View(model);
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

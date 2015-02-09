@@ -1,0 +1,99 @@
+﻿@model IEnumerable<LaPlumaDeAsis.Models.Cuchillo>
+
+@{
+    ViewBag.Title = "AdminCatalogo";
+}
+
+<h2>AdminCatalogo</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Clase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HojaTipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HojaMarca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaterialCabo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaterialBoton)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reciclado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Antiguo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Antiguedad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HojaTipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HojaMarca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaterialCabo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaterialBoton)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reciclado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Antiguo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Antiguedad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

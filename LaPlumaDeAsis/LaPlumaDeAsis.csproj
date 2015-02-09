@@ -163,9 +163,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ArticulosModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LaPlumaDeAsisDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -257,6 +259,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\LaPluma.cshtml" />
     <Content Include="Views\Home\ElAutor.cshtml" />
+    <Content Include="Views\Home\AdminCatalogo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
